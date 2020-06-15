@@ -90,13 +90,15 @@ export default {
     basePath: '/',
   },
   chainWebpack: webpackPlugin,
-  /*
   proxy: {
     '/server/api/': {
       target: 'https://preview.pro.ant.design/',
       changeOrigin: true,
       pathRewrite: { '^/server': '' },
     },
+    '/fileservice': {
+      target: 'http://192.168.101.102:5051/',
+      changeOrigin: true,
   },
-  */
+  },
 };

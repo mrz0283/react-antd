@@ -1,6 +1,10 @@
 const routes = [
   {
     path: '/',
+    redirect: '/antdTest/table',
+  },
+  {
+    path: '/',
     component: '../layouts',
     routes: [
       {
@@ -10,9 +14,21 @@ const routes = [
         routes: [
           {
             path: '/antdTest/table',
-            name: 'table',
+            name: '表格',
             icon: 'bell',
             component: '../../src/pages/table/index.js',
+          },
+          {
+            path: '/antdTest/Calendar',
+            name: '表格',
+            icon: 'bell',
+            component: '../../src/pages/Calendar/index.js',
+          },
+          {
+            path: '/antdTest/upload',
+            name: '表格',
+            icon: 'bell',
+            component: '../../src/pages/upload/index.js',
           },
         ]
       },

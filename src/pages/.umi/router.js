@@ -11,6 +11,11 @@ const Router = require('dva/router').routerRedux.ConnectedRouter;
 const routes = [
   {
     "path": "/",
+    "redirect": "/antdTest/table",
+    "exact": true
+  },
+  {
+    "path": "/",
     "component": __IS_BROWSER
     ? _dvaDynamic({
       
@@ -26,7 +31,7 @@ const routes = [
         "routes": [
           {
             "path": "/antdTest/table",
-            "name": "table",
+            "name": "表格",
             "icon": "bell",
             "component": __IS_BROWSER
     ? _dvaDynamic({
@@ -35,6 +40,32 @@ const routes = [
       LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
     })
     : require('../table/index.js').default,
+            "exact": true
+          },
+          {
+            "path": "/antdTest/Calendar",
+            "name": "表格",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__Calendar__index" */'../Calendar/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../Calendar/index.js').default,
+            "exact": true
+          },
+          {
+            "path": "/antdTest/upload",
+            "name": "表格",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__upload__index" */'../upload/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../upload/index.js').default,
             "exact": true
           },
           {

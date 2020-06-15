@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import zhCN from 'antd/es/locale/zh_CN';
-import { Layout, ConfigProvider } from 'antd';
-// import { menuList } from '@/utils/constants';
+import { Layout, ConfigProvider,BackTop } from 'antd';
 import HeaderContent from './components/Header';
 import FooterContent from './components/Footer';
 import SideBarContent from './components/SideBar';
@@ -14,7 +13,6 @@ let globalTitle = '';
 class BasicLayout extends Component {
   constructor(props) {
     super(props);
-    // this.clickIcon = this.clickIcon.bind(this);
     this.state = {
       collapsed: false,
       menuMode: 'vertical',
@@ -59,7 +57,7 @@ class BasicLayout extends Component {
               <HeaderContent menuClick={this.menuClick} colorClick={this.colorClick} collapsed={collapsed} clickIcon={this.clickIcon}></HeaderContent>
             </Header>
             <Content>
-              <div className={styles.layoutContent}>{this.props.children}</div>
+              <div className={styles.layoutContent}> <BackTop />{this.props.children}</div>
             </Content>
             <Footer className={styles.layoutFooter}>
               <FooterContent></FooterContent>

@@ -9,6 +9,16 @@ const routes = [
         name: 'table',
         icon: 'bell',
       },
+      {
+        path: '/antdTest/Calendar',
+        name: 'Calendar',
+        icon: 'bell',
+      },
+      {
+        path: '/antdTest/upload',
+        name: 'upload',
+        icon: 'bell',
+      },
     ]
   },
   {

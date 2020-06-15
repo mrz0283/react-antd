@@ -7,15 +7,22 @@ import routes from '@/routes'
 
 const { SubMenu } = Menu;
 
+
 class SideBarContent extends Component {
   constructor(props) {
     super(props);
+    const curPath = window.location.hash;
     this.state = {
-      activeMenu: window.location.hash,
+      activeMenu: curPath,
     };
   }
 
   componentDidMount() { }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const curPath = window.location.pathname;
+    return { ...prevState, activeMenu: curPath };
+  }
 
   menuList = data => {
     return data.map(item => {
@@ -58,28 +65,14 @@ class SideBarContent extends Component {
     })
   }
 
-  changeMode = value => {
-    this.setState({
-      mode: value ? 'vertical' : 'inline',
-    });
-  };
-
-  changeTheme = value => {
-    this.setState({
-      theme: value ? 'dark' : 'light',
-    });
-  };
-
   clickMenu = record => {
-    debugger
-    const curPath = window.location.hash;
+    const curPath = window.location.pathname;
     if (curPath === record.path) {
       return;
     }
     this.setState({ activeMenu: record.path }, () => {
-      debugger
       router.push(record.path);
-      // window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
     });
   }
 
