@@ -1,8 +1,8 @@
-import defaultSettings from './defaultSettings'; 
+import defaultSettings from './defaultSettings';
 import routes from './route'
 import slash from 'slash2';
 import webpackPlugin from './plugin.config';
-const { pwa, primaryColor } = defaultSettings; 
+const { pwa, primaryColor } = defaultSettings;
 
 const plugins = [
   [
@@ -41,7 +41,7 @@ const plugins = [
       autoAddMenu: true,
     },
   ],
-]; 
+];
 
 export default {
   plugins,
@@ -99,6 +99,10 @@ export default {
     '/fileservice': {
       target: 'http://192.168.101.102:5051/',
       changeOrigin: true,
-  },
+    },
+    '/mapInter': {
+      target: 'https://geo.datav.aliyun.com/areas_v2/bound/',
+      changeOrigin: true,
+    },
   },
 };

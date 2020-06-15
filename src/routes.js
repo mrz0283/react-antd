@@ -22,6 +22,18 @@ const routes = [
     ]
   },
   {
+    path: '/D3',
+    name: 'D3示例',
+    icon: 'icon-project-manage',
+    children: [
+      {
+        path: '/D3/table',
+        name: '表格',
+        icon: 'bell',
+      },
+    ]
+  },
+  {
     path: '/welcome',
     name: 'welcome',
     icon: 'bell',

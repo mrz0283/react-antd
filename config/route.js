@@ -33,6 +33,19 @@ const routes = [
         ]
       },
       {
+        path: '/D3',
+        name: 'D3示例',
+        icon: 'icon-project-manage',
+        routes: [
+          {
+            path: '/D3/table',
+            name: '表格',
+            icon: 'bell',
+            component: '../../src/pages/D3/index.js',
+          },
+        ]
+      },
+      {
         path: '/welcome',
         name: 'welcome',
         icon: 'smile',

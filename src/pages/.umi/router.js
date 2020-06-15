@@ -74,6 +74,29 @@ const routes = [
         ]
       },
       {
+        "path": "/D3",
+        "name": "D3示例",
+        "icon": "icon-project-manage",
+        "routes": [
+          {
+            "path": "/D3/table",
+            "name": "表格",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__D3__index" */'../D3/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../D3/index.js').default,
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/work/antd-pro/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
         "path": "/welcome",
         "name": "welcome",
         "icon": "smile",

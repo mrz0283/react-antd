@@ -22,6 +22,7 @@ export function _onCreate() {
   
   app.model({ namespace: 'global', ...(require('D:/work/antd-pro/src/models/global.js').default) });
 app.model({ namespace: 'login', ...(require('D:/work/antd-pro/src/models/login.js').default) });
+app.model({ namespace: 'modelAll', ...(require('D:/work/antd-pro/src/models/modelAll.js').default) });
 app.model({ namespace: 'setting', ...(require('D:/work/antd-pro/src/models/setting.js').default) });
 app.model({ namespace: 'user', ...(require('D:/work/antd-pro/src/models/user.js').default) });
   return app;

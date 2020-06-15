@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { Form, Row, Col, Input, Divider, Radio, Select, Upload, Modal, Button, Icon, message } from 'antd';
 import { connect } from 'dva';
 import Api from '@/utils/api';
-import router from 'umi/router';
-import styles from './index.less';
 
 const FormItem = Form.Item;
 const { Option } = Select;
