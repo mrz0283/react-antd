@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PageHeaderWrapper from '@/components/breadcrumb';
+import PageHeader from '@/components/Header/headerCrumbs'
 import { Form, Row, Col, Input, Divider, Radio, Select, Upload, Modal, Button, Icon, message } from 'antd';
 import { connect } from 'dva';
 import Api from '@/utils/api';
@@ -117,7 +117,8 @@ class TableView extends Component {
     const imageUrl = imgUrlList && imgUrlList[0] && imgUrlList[0].response && imgUrlList[0].response.data ? imgUrlList[0].response.data.fullPath : '';
     return (
       <div>
-        <Form>
+        <PageHeader></PageHeader>
+        <Form style={{ marginTop: 20 }}>
           <Row type="flex" gutter={{ md: 8, lg: 12, xl: 24 }}>
             <Col xxl={24} xl={24} lg={24} md={24} sm={24} xs={24}>
               <FormItem label="多张照片">

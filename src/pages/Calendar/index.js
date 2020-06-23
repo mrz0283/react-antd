@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Tag, Modal, Badge , Card, Calendar } from 'antd';
-import { connect } from 'dva';
+import { Modal, Badge, Card, Calendar } from 'antd';
+import PageHeader from '@/components/Header/headerCrumbs'
 
 const { confirm } = Modal;
 
@@ -78,8 +78,8 @@ class CalendarView extends Component {
   render() {
     return (
       <div>
-        {/* <PageHeaderWrapper></PageHeaderWrapper> */}
-        <Card>
+        <PageHeader></PageHeader>
+        <Card style={{ marginTop: 20 }}>
           <Calendar onPanelChange={this.onPanelChange} dateCellRender={this.dateCellRender} monthCellRender={this.monthCellRender} />
         </Card>
       </div>

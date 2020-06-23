@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { Table, Tag, Modal, Divider, Card } from 'antd';
-import { connect } from 'dva';
-
-const { confirm } = Modal;
+import { Table, Tag, Divider, Card } from 'antd';
+import Styles from './index.less';
+import PageHeader from '@/components/Header/headerCrumbs'
 
 class TableView extends Component {
   columns = [
     {
-      title: 'Name',
+      title: <div><span>123</span><span>456</span></div>,
       dataIndex: 'name',
+      width: 200,
       key: 'name',
       render: text => <a>{text}</a>,
     },
     {
-      title: 'Age',
+      title: <div>
+        <b>类别</b>
+      </div>,
       dataIndex: 'age',
       key: 'age',
     },
@@ -58,10 +60,14 @@ class TableView extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      areaList: [],
+      width: 0,
+      height: 0,
     };
   }
 
   render() {
+    const { areaList } = this.state;
     const data = [
       {
         key: '1',
@@ -87,13 +93,14 @@ class TableView extends Component {
     ];
     return (
       <div>
-        {/* <PageHeaderWrapper></PageHeaderWrapper> */}
-        <Card>
+        <PageHeader></PageHeader>
+        <Card style={{ marginTop: 20 }} className={Styles.header}>
           <Table columns={this.columns} dataSource={data} scroll={{ x: 1100 }} />
         </Card>
-      </div>
+      </div >
     );
   }
 }
 
 export default TableView;
+

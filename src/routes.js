@@ -28,7 +28,41 @@ const routes = [
     children: [
       {
         path: '/D3/table',
+        name: '折线图',
+        icon: 'bell',
+      },
+    ]
+  },
+  {
+    path: '/Echarts',
+    name: 'echarts示例',
+    icon: 'icon-project-manage',
+    children: [
+      {
+        path: '/Echarts/Bar',
+        name: '柱状图',
+        icon: 'bell',
+      },
+      {
+        path: '/Echarts/Line',
+        name: '折线图',
+        icon: 'bell',
+      },
+      {
+        path: '/Echarts/Pie',
         name: '表格',
+        icon: '饼状图',
+      },
+    ]
+  },
+  {
+    path: '/editor',
+    name: '拖拽',
+    icon: 'icon-project-manage',
+    children: [
+      {
+        path: '/editor/flow',
+        name: '拖拽方块',
         icon: 'bell',
       },
     ]

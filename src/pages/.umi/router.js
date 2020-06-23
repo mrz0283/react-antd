@@ -26,12 +26,10 @@ const routes = [
     "routes": [
       {
         "path": "/antdTest",
-        "name": "antd示例",
         "icon": "icon-project-manage",
         "routes": [
           {
             "path": "/antdTest/table",
-            "name": "表格",
             "icon": "bell",
             "component": __IS_BROWSER
     ? _dvaDynamic({
@@ -44,7 +42,6 @@ const routes = [
           },
           {
             "path": "/antdTest/Calendar",
-            "name": "表格",
             "icon": "bell",
             "component": __IS_BROWSER
     ? _dvaDynamic({
@@ -57,7 +54,6 @@ const routes = [
           },
           {
             "path": "/antdTest/upload",
-            "name": "表格",
             "icon": "bell",
             "component": __IS_BROWSER
     ? _dvaDynamic({
@@ -75,12 +71,10 @@ const routes = [
       },
       {
         "path": "/D3",
-        "name": "D3示例",
         "icon": "icon-project-manage",
         "routes": [
           {
             "path": "/D3/table",
-            "name": "表格",
             "icon": "bell",
             "component": __IS_BROWSER
     ? _dvaDynamic({
@@ -89,6 +83,72 @@ const routes = [
       LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
     })
     : require('../D3/index.js').default,
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/work/antd-pro/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
+        "path": "/echarts",
+        "icon": "icon-project-manage",
+        "routes": [
+          {
+            "path": "/Echarts/Bar",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__Echarts__Bar__index" */'../Echarts/Bar/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../Echarts/Bar/index.js').default,
+            "exact": true
+          },
+          {
+            "path": "/Echarts/Line",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__Echarts__Line__index" */'../Echarts/Line/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../Echarts/Line/index.js').default,
+            "exact": true
+          },
+          {
+            "path": "/Echarts/Pie",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__Echarts__Pie__index" */'../Echarts/Pie/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../Echarts/Pie/index.js').default,
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/work/antd-pro/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
+        "path": "/editor",
+        "icon": "icon-project-manage",
+        "routes": [
+          {
+            "path": "/editor/flow",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__editor__flow__index" */'../editor/flow/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../editor/flow/index.js').default,
             "exact": true
           },
           {

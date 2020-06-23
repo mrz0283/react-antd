@@ -9,24 +9,20 @@ const routes = [
     routes: [
       {
         path: '/antdTest',
-        name: 'antd示例',
         icon: 'icon-project-manage',
         routes: [
           {
             path: '/antdTest/table',
-            name: '表格',
             icon: 'bell',
             component: '../../src/pages/table/index.js',
           },
           {
             path: '/antdTest/Calendar',
-            name: '表格',
             icon: 'bell',
             component: '../../src/pages/Calendar/index.js',
           },
           {
             path: '/antdTest/upload',
-            name: '表格',
             icon: 'bell',
             component: '../../src/pages/upload/index.js',
           },
@@ -34,14 +30,44 @@ const routes = [
       },
       {
         path: '/D3',
-        name: 'D3示例',
         icon: 'icon-project-manage',
         routes: [
           {
             path: '/D3/table',
-            name: '表格',
             icon: 'bell',
             component: '../../src/pages/D3/index.js',
+          },
+        ]
+      },
+      {
+        path: '/echarts',
+        icon: 'icon-project-manage',
+        routes: [
+          {
+            path: '/Echarts/Bar',
+            icon: 'bell',
+            component: '../../src/pages/Echarts/Bar/index.js',
+          },
+          {
+            path: '/Echarts/Line',
+            icon: 'bell',
+            component: '../../src/pages/Echarts/Line/index.js',
+          },
+          {
+            path: '/Echarts/Pie',
+            icon: 'bell',
+            component: '../../src/pages/Echarts/Pie/index.js',
+          },
+        ]
+      },
+      {
+        path: '/editor',
+        icon: 'icon-project-manage',
+        routes: [
+          {
+            path: '/editor/flow',
+            icon: 'bell',
+            component: '../../src/pages/editor/flow/index.js',
           },
         ]
       },
