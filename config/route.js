@@ -1,7 +1,11 @@
 const routes = [
+  // {
+  //   path: '/login',
+  //   component: '../src/pages/login',
+  // },
   {
     path: '/',
-    redirect: '/antdTest/table',
+    redirect: '/login',
   },
   {
     path: '/',
@@ -71,6 +75,23 @@ const routes = [
           },
         ]
       },
+      {
+        path: '/other',
+        icon: 'icon-project-manage',
+        routes: [
+          {
+            path: '/other/translateEn',
+            icon: 'bell',
+            component: '../../src/pages/Translate/index.js',
+          },
+        ]
+      },
+      // {
+      //   path: '/translateEn',
+      //   name: '翻译',
+      //   icon: 'smile',
+      //   component: '../../src/pages/Translate/index.js',
+      // },
       {
         path: '/welcome',
         name: 'welcome',

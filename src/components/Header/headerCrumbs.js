@@ -16,7 +16,6 @@ class TableView extends Component {
     const path = this.props.match.path;
     let name = [];
     this.crumbsName(router, path, name);
-    debugger
     this.setState({
       name,
     })

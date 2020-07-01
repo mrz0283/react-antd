@@ -11,7 +11,7 @@ const Router = require('dva/router').routerRedux.ConnectedRouter;
 const routes = [
   {
     "path": "/",
-    "redirect": "/antdTest/table",
+    "redirect": "/login",
     "exact": true
   },
   {
@@ -149,6 +149,27 @@ const routes = [
       LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
     })
     : require('../editor/flow/index.js').default,
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/work/antd-pro/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
+        "path": "/other",
+        "icon": "icon-project-manage",
+        "routes": [
+          {
+            "path": "/other/translateEn",
+            "icon": "bell",
+            "component": __IS_BROWSER
+    ? _dvaDynamic({
+      
+      component: () => import(/* webpackChunkName: "p__Translate__index" */'../Translate/index.js'),
+      LoadingComponent: require('D:/work/antd-pro/src/components/PageLoading/index').default,
+    })
+    : require('../Translate/index.js').default,
             "exact": true
           },
           {

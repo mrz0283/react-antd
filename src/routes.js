@@ -50,8 +50,8 @@ const routes = [
       },
       {
         path: '/Echarts/Pie',
-        name: '表格',
-        icon: '饼状图',
+        name: '饼状图',
+        icon: 'bell',
       },
     ]
   },
@@ -67,6 +67,23 @@ const routes = [
       },
     ]
   },
+  {
+    path: '/other',
+    name: '其他',
+    icon: 'icon-project-manage',
+    children: [
+      {
+        path: '/other/translateEn',
+        name: '翻译',
+        icon: 'bell',
+      },
+    ]
+  },
+  // {
+  //   path: '/translateEn',
+  //   name: '翻译',
+  //   icon: 'smile',
+  // },
   {
     path: '/welcome',
     name: 'welcome',

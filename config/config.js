@@ -104,5 +104,13 @@ export default {
       target: 'https://geo.datav.aliyun.com/areas_v2/bound/',
       changeOrigin: true,
     },
+    '/translate': {
+      target: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+      changeOrigin: true,
+    },
+    '/googleTranslate': {
+      target: 'http://translate.google.cn/translate_a/single',
+      changeOrigin: true,
+    },
   },
 };
